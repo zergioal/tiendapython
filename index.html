@@ -30,6 +30,284 @@
       </div>
     </header>
 
-    <!-- Añadir contenido colaboradores -->
+    <!-- PANEL DEL CARRITO -->
+    <div
+      class="carrito-overlay"
+      id="carrito-overlay"
+      onclick="toggleCarrito()"
+    ></div>
+    <aside class="carrito-panel" id="carrito-panel">
+      <div class="carrito-header">
+        <h3>🛒 Tu Carrito</h3>
+        <button class="carrito-cerrar" onclick="toggleCarrito()">✕</button>
+      </div>
+      <div class="carrito-items" id="carrito-items">
+        <p class="carrito-vacio">Tu carrito está vacío</p>
+      </div>
+      <div class="carrito-footer" id="carrito-footer" style="display: none">
+        <div class="carrito-total">
+          Total: <strong id="carrito-total-monto">Bs 0</strong>
+        </div>
+        <button class="btn-pagar" onclick="pagar()">Confirmar pedido</button>
+      </div>
+    </aside>
+
+    <!-- MAIN: feature/CUERPO — Colaborador -->
+    <main id="main">
+      <section class="hero" id="inicio">
+        <div class="hero-content">
+          <h1>Bienvenido a <span class="highlight">TiendaPython</span></h1>
+          <p>
+            Tecnología y accesorios al mejor precio en Cochabamba. Encuentra
+            todo lo que necesitas.
+          </p>
+          <a href="#productos" class="btn-hero">Ver productos</a>
+        </div>
+      </section>
+
+      <section class="productos" id="productos">
+        <h2 class="section-title">Nuestros Productos</h2>
+        <div class="productos-grid">
+          <div class="producto-card">
+            <div class="producto-img">💻</div>
+            <h3>Laptop Pro</h3>
+            <p>Procesador Intel i7, 16GB RAM, 512GB SSD</p>
+            <div class="precio">Bs 6.200</div>
+            <button
+              class="btn-agregar"
+              onclick="agregarAlCarrito('Laptop Pro', 6200)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <div class="producto-card">
+            <div class="producto-img">📱</div>
+            <h3>Smartphone X</h3>
+            <p>Pantalla AMOLED, 128GB, cámara 108MP</p>
+            <div class="precio">Bs 3.450</div>
+            <button
+              class="btn-agregar"
+              onclick="agregarAlCarrito('Smartphone X', 3450)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <div class="producto-card">
+            <div class="producto-img">🎧</div>
+            <h3>Audífonos Pro</h3>
+            <p>Cancelación de ruido, 30h de batería, Bluetooth 5.0</p>
+            <div class="precio">Bs 1.050</div>
+            <button
+              class="btn-agregar"
+              onclick="agregarAlCarrito('Audífonos Pro', 1050)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <div class="producto-card">
+            <div class="producto-img">⌨️</div>
+            <h3>Teclado Mecánico</h3>
+            <p>Switches Cherry MX, retroiluminación RGB</p>
+            <div class="precio">Bs 620</div>
+            <button
+              class="btn-agregar"
+              onclick="agregarAlCarrito('Teclado Mecánico', 620)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <div class="producto-card">
+            <div class="producto-img">🖱️</div>
+            <h3>Mouse Gamer</h3>
+            <p>16000 DPI, 7 botones programables, RGB</p>
+            <div class="precio">Bs 420</div>
+            <button
+              class="btn-agregar"
+              onclick="agregarAlCarrito('Mouse Gamer', 420)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+
+          <div class="producto-card">
+            <div class="producto-img">🖥️</div>
+            <h3>Monitor 4K</h3>
+            <p>27", 144Hz, panel IPS, HDR400</p>
+            <div class="precio">Bs 2.400</div>
+            <button
+              class="btn-agregar"
+              onclick="agregarAlCarrito('Monitor 4K', 2400)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="nosotros" id="nosotros">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <div class="nosotros-content">
+          <p>
+            Somos un equipo apasionado por la tecnología en Cochabamba, Bolivia.
+            TiendaPython nació como proyecto académico con el objetivo de
+            aprender desarrollo web colaborativo usando HTML, CSS, Python y
+            GitHub.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <strong>+100</strong>
+              <span>Productos</span>
+            </div>
+            <div class="stat">
+              <strong>2</strong>
+              <span>Desarrolladores</span>
+            </div>
+            <div class="stat">
+              <strong>2026</strong>
+              <span>Fundación</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER: feature/PIE-PAGINA — Líder -->
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>TiendaPython</h4>
+          <p>Tu tienda de tecnología de confianza en Cochabamba, Bolivia.</p>
+        </div>
+        <div class="footer-section" id="contacto">
+          <h4>Contacto</h4>
+          <ul class="footer-list">
+            <li>📧 contacto@tiendapython.com</li>
+            <li>📞 70745899</li>
+            <li>📍 Cochabamba, Bolivia</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Redes Sociales</h4>
+          <div class="redes">
+            <a href="#" class="red-social">GitHub</a>
+            <a href="#" class="red-social">Instagram</a>
+            <a href="#" class="red-social">Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 TiendaPython — Cochabamba, Bolivia. Proyecto académico.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Estado del carrito
+      let carrito = [];
+
+      function agregarAlCarrito(nombre, precio) {
+        const existente = carrito.find((item) => item.nombre === nombre);
+        if (existente) {
+          existente.cantidad++;
+        } else {
+          carrito.push({ nombre, precio, cantidad: 1 });
+        }
+        actualizarUI();
+        abrirCarrito();
+      }
+
+      function cambiarCantidad(nombre, delta) {
+        const item = carrito.find((i) => i.nombre === nombre);
+        if (!item) return;
+        item.cantidad += delta;
+        if (item.cantidad <= 0) {
+          carrito = carrito.filter((i) => i.nombre !== nombre);
+        }
+        actualizarUI();
+      }
+
+      function eliminarItem(nombre) {
+        carrito = carrito.filter((i) => i.nombre !== nombre);
+        actualizarUI();
+      }
+
+      function actualizarUI() {
+        // Actualizar badge del header
+        const totalItems = carrito.reduce((sum, i) => sum + i.cantidad, 0);
+        document.querySelector(".carrito-count").textContent = totalItems;
+
+        const contenedor = document.getElementById("carrito-items");
+        const footer = document.getElementById("carrito-footer");
+
+        if (carrito.length === 0) {
+          contenedor.innerHTML =
+            '<p class="carrito-vacio">Tu carrito está vacío</p>';
+          footer.style.display = "none";
+          return;
+        }
+
+        footer.style.display = "flex";
+
+        contenedor.innerHTML = carrito
+          .map(
+            (item) => `
+        <div class="carrito-item">
+          <div class="carrito-item-nombre">${item.nombre}</div>
+          <div class="carrito-item-precio">Bs ${item.precio.toLocaleString("es-BO")}</div>
+          <div class="carrito-item-controles">
+            <button class="btn-qty" onclick="cambiarCantidad('${item.nombre}', -1)">−</button>
+            <span class="qty-valor">${item.cantidad}</span>
+            <button class="btn-qty" onclick="cambiarCantidad('${item.nombre}', 1)">+</button>
+            <button class="btn-eliminar" onclick="eliminarItem('${item.nombre}')">🗑</button>
+          </div>
+          <div class="carrito-item-subtotal">
+            Subtotal: Bs ${(item.precio * item.cantidad).toLocaleString("es-BO")}
+          </div>
+        </div>
+      `,
+          )
+          .join("");
+
+        const total = carrito.reduce(
+          (sum, i) => sum + i.precio * i.cantidad,
+          0,
+        );
+        document.getElementById("carrito-total-monto").textContent =
+          "Bs " + total.toLocaleString("es-BO");
+      }
+
+      function toggleCarrito() {
+        const panel = document.getElementById("carrito-panel");
+        const overlay = document.getElementById("carrito-overlay");
+        panel.classList.toggle("abierto");
+        overlay.classList.toggle("visible");
+      }
+
+      function abrirCarrito() {
+        const panel = document.getElementById("carrito-panel");
+        const overlay = document.getElementById("carrito-overlay");
+        panel.classList.add("abierto");
+        overlay.classList.add("visible");
+      }
+
+      function pagar() {
+        if (carrito.length === 0) return;
+        const total = carrito.reduce(
+          (sum, i) => sum + i.precio * i.cantidad,
+          0,
+        );
+        alert(
+          `✅ Pedido confirmado!\nTotal: Bs ${total.toLocaleString("es-BO")}\n\nNos contactaremos al 70745899. ¡Gracias!`,
+        );
+        carrito = [];
+        actualizarUI();
+        toggleCarrito();
+      }
+    </script>
   </body>
 </html>
