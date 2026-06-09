@@ -19,7 +19,7 @@ Proyecto académico de desarrollo web colaborativo — Tienda de tecnología des
 
 ### ¿Qué hace la página?
 
-- Muestra un **catálogo de 6 productos tecnológicos** con precios en bolivianos (Bs)
+- Muestra un **catálogo de 6 productos** con precios en (Bs)
 - Permite **agregar productos al carrito** de compras interactivo
 - El carrito permite **modificar cantidades**, eliminar productos y ver el total
 - Incluye un **servidor web con Flask** para servir la página desde Python
